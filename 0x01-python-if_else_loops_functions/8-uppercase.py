@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usir/bin/python3
 def uppercase(str):
     sent = ""
     for i in str:
@@ -7,4 +7,4 @@ def uppercase(str):
             sent += (chr(c - 32))
         else:
             sent += (chr(c))
-    print(sent)
+    print("{}".format(sent))
