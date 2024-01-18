@@ -6,7 +6,7 @@ if __name__ == "__main__":
     argus = sys.argv[1:]
 
     if total == 0:
-        print("0 arguments.")
+        print("{}".format('0 arguments.'))
     else:
         print("{} argument{}:".format(total, '' if total == 1 else 's'))
         for i, arg in enumerate(argus, start=1):
