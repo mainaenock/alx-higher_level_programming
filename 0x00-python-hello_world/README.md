@@ -1,1 +1,1 @@
-This is my first directory in my learning of python
+this is the start of using python programming
