@@ -4,11 +4,5 @@
 
 class Square:
     
-    """
-    Reps a square
-    Attributes:
-    none
-    methods:
-    none
-    """
+    """Reps a square"""
     pass
