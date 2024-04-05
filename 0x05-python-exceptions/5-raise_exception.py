@@ -4,4 +4,3 @@ def raise_exception():
         num = 1 + "enock"
     except Exception as e:
         raise (TypeError)
-
