@@ -8,3 +8,6 @@ class TestMaxInteger(unittest.TestCase):
     def test_max(self):
         result = max_integer([1, 4, 6, 10])
         self.assertEqual(result, 10)
+
+if __name__ == '__main__':
+    unittest.main()
