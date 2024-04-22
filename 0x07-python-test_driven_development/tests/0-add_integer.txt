@@ -1,0 +1,22 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(1, 1)
+2
+>>> add_integer(-1, 1)
+0
+>>> add_integer(20000, 30000)
+50000
+>>> add_integer(0,0)
+0
+>>> add_integer(2.5, 3)
+5
+>>> add_integer("enock", 5)
+Traceback (most recent call last):
+	...
+TypeError: a must be an integer
+>>> add_integer(4, "maina")
+Traceback (most recent call last):
+	...
+TypeError: b must be an integer
+>>> add_integer(-2, -3)
+-5
