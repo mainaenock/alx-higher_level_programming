@@ -3,3 +3,11 @@
 Traceback (most recent call last):
 	...
 TypeError: text must be a string
+>>> text_indentation("My name is: Enock. What is yours?")
+My name is:
+<BLANKLINE>
+ Enock.
+<BLANKLINE>
+ What is yours?
+<BLANKLINE>
+<BLANKLINE>
