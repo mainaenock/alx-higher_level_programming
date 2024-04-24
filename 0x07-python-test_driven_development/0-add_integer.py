@@ -4,6 +4,8 @@ Adds 2 integers or floats
 Args:a: first num
     b: second num
 """
+
+
 def add_integer(a, b=98):
     """
     adds 2 integers
