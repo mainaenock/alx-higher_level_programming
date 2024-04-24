@@ -2,6 +2,8 @@
 """
 This module multiplies 2 matrices
 """
+
+
 def matrix_mul(m_a, m_b):
     """
     This function takes 2 parameters to represent the 2 matrices
@@ -39,10 +41,10 @@ def matrix_mul(m_a, m_b):
     if a_len != len(m_b):
         raise ValueError("m_a and m_b can't be multiplied")
     result = [[0] * len(m_b[0]) for _ in range(len(m_a))]
-    
+
     for i in range(len(m_a)):
         for j in range(len(m_b[0])):
             for k in range(len(m_b)):
                 result[i][j] += m_a[i][k] * m_b[k][j]
-    
+
     return result
