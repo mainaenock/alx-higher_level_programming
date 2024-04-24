@@ -8,12 +8,14 @@ class Rectangle:
     """
     This is a class for the rectangle
     """
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """ initialization"""
         self.__width = width
         self.__height = height
 
-        number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -67,3 +69,4 @@ class Rectangle:
 
     def __del__(self):
         print("{}".format("Bye rectangle..."))
+        Rectangle.number_of_instances -= 1
