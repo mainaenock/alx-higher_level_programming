@@ -58,4 +58,14 @@ class Rectangle:
         rec_str = ""
         for row in range(self.__height):
             rec_str += ("#" * self.__width) + '\n'
-        return rec_str
+        return rec_str.rstrip()
+    """
+    rec_repr = ""
+    def __repr__(self):
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        rec_repr = ""
+        for row in range(self.__height):
+            rec_repr = ("#" * self.__width) + '\n'
+        return rec_repr
+    """
