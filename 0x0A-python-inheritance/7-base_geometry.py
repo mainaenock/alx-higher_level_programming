@@ -10,9 +10,15 @@ class BaseGeometry:
     An empty class
     """
     def area(self):
+        """
+        area
+        """
         raise Exception("area() is not implemented")
 
-    def integer_validator(self, name:str, value):
+    def integer_validator(self, name: str, value):
+        """
+        validation
+        """
         self.name = name
         self.value = value
 
