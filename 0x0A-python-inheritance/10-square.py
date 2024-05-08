@@ -43,6 +43,9 @@ class Rectangle(BaseGeometry):
 
 
 class Square(Rectangle):
+    """
+    grandchild class
+    """
     def __init__(self, size):
         self.__size = size
         super().__init__(size, size)
