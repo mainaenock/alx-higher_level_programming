@@ -9,5 +9,5 @@ def read_file(filename=""):
     opens and reads
     """
     with open(filename, "r", encoding="utf-8") as file:
-        opened = file.read()
-        print("{}".format(opened.strip()))
+        for line in file:
+            print("{}".format(line.strip()))
