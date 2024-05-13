@@ -30,11 +30,11 @@ class Rectangle(Base):
             __y (int): Private attribute for y-coordinate.
         """
         super().__init__(id)
-
-        self.__width = width
         self.__height = height
+        self.__width = width
         self.__x = x
         self.__y = y
+
 
     @property
     def width(self):
@@ -42,6 +42,10 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, new):
+        if not isinstance(new, int):
+            raise TypeError("width must be an integer")
+        if new <= 0:
+            raise ValueError("width must be > 0")
         self.__width = new
 
     @property
@@ -50,6 +54,10 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, new):
+        if not isinstance(new, int):
+            raise TypeError("height must be an integer")
+        if new <= 0:
+            raise ValueError("height must be > 0")
         self.__height = new
 
     @property
@@ -58,6 +66,8 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, new):
+        if new < 0:
+            raise ValueError("x must be >= 0")
         self.__x = new
 
     @property
@@ -66,4 +76,6 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, new):
+        if new < 0:
+            raise ValueError("y must be >= 0")
         self.__y = new
