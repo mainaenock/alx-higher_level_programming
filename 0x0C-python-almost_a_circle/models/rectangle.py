@@ -88,3 +88,10 @@ class Rectangle(Base):
         returns are of Rectangle's instances
         """
         return self.__width * self.__height
+
+    def display(self):
+        """
+        prints in stdout the Rectangle instance with the char #
+        """
+        for _ in range(self.__height):
+            print("{}".format('#' * self.__width))
