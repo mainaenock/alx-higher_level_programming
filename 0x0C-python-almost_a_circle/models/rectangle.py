@@ -30,10 +30,10 @@ class Rectangle(Base):
             __y (int): Private attribute for y-coordinate.
         """
         super().__init__(id)
-        self.__height = height
-        self.__width = width
-        self.__x = x
-        self.__y = y
+        self.height = height
+        self.width = width
+        self.x = x
+        self.y = y
 
 
     @property
@@ -41,41 +41,45 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self, new):
-        if not isinstance(new, int):
+    def width(self, new_w):
+        if not isinstance(new_w, int):
             raise TypeError("width must be an integer")
-        if new <= 0:
+        elif new_w <= 0:
             raise ValueError("width must be > 0")
-        self.__width = new
+        self.__width = new_w
 
     @property
     def height(self):
         return self.__height
 
     @height.setter
-    def height(self, new):
-        if not isinstance(new, int):
+    def height(self, new_h):
+        if not isinstance(new_h, int):
             raise TypeError("height must be an integer")
-        if new <= 0:
+        elif new_h <= 0:
             raise ValueError("height must be > 0")
-        self.__height = new
+        self.__height = new_h
 
     @property
     def x(self):
         return self.__x
 
     @x.setter
-    def x(self, new):
-        if new < 0:
+    def x(self, new_x):
+        if new_x < 0:
             raise ValueError("x must be >= 0")
-        self.__x = new
+        self.__x = new_x
+        if not isinstance(new_x, int):
+            raise TypeError("x must be an integer")
 
     @property
     def y(self):
         return self.__y
 
     @y.setter
-    def y(self, new):
-        if new < 0:
+    def y(self, new_y):
+        if new_y < 0:
             raise ValueError("y must be >= 0")
-        self.__y = new
+        if not isinstance(new_y, int):
+            raise TypeError("y must be an integer")
+        self.__y = new_y
