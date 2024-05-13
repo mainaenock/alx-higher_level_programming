@@ -41,29 +41,29 @@ class Rectangle(Base):
         return self.__width
 
     @width.setter
-    def width(self):
-        self.__width = width
+    def width(self, new):
+        self.__width = new
 
     @property
     def height(self):
         return self.__height
 
     @height.setter
-    def height(self):
-        self.__height = height
+    def height(self, new):
+        self.__height = new
 
     @property
     def x(self):
         return self.__x
 
     @x.setter
-    def x(self):
-        self.__x = x
+    def x(self, new):
+        self.__x = new
 
     @property
     def y(self):
         return self.__y
 
     @y.setter
-    def y(self):
-        self.__y = y
+    def y(self, new):
+        self.__y = new
