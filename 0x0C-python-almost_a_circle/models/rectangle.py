@@ -70,7 +70,7 @@ class Rectangle(Base):
             raise TypeError("x must be an integer")
         self.__x = new_x
         if new_x < 0:
-            raise ValueError("x must be > 0")
+            raise ValueError("x must be >= 0")
 
     @property
     def y(self):
@@ -81,5 +81,5 @@ class Rectangle(Base):
         if not isinstance(new_y, int):
             raise TypeError("y must be an integer")
         if new_y < 0:
-            raise ValueError("y must be > 0")
+            raise ValueError("y must be >= 0")
         self.__y = new_y
