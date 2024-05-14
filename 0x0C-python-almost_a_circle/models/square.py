@@ -17,7 +17,7 @@ class Square(Rectangle):
         """
         initialization of the square attributes
         """
-        super().__init__(size, size, x, y, id)
+        super().__init__(size, size, x, y, id=None)
         self.size = size
 
     def __str__(self):
