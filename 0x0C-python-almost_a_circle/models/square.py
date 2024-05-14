@@ -38,4 +38,4 @@ class Square(Rectangle):
         elif new_w <= 0:
             raise ValueError("width must be > 0")
         self.width = new_w
-        self.height = new_w 
+        self.height = new_w
