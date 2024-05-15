@@ -41,4 +41,4 @@ class Base:
             return "[]"
         filename = cls.__name__ + ".json"
         with open(filename, "w", encoding="utf-8") as file:
-            json.dump([obj.to_dictionary() for obj in list_objs], file)
+            json.dump([obj.to_json_string() for obj in list_objs], file)
