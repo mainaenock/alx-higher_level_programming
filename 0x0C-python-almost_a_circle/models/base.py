@@ -42,3 +42,13 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, "w", encoding="utf-8") as file:
             json.dump([obj.to_json_string() for obj in list_objs], file)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the list of the JSON string representation json_string
+        """
+        if json_string is None:
+            return "[]"
+        string = json.load(json_string)
+        return string
