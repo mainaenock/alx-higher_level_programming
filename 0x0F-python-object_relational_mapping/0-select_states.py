@@ -1,6 +1,14 @@
 #!/usr/bin/python3
 
 import MySQLdb
+import sys
+
+def main():
+    if len(sys.argv) != 4:
+        print("Usage: python script.py root kali hbtn_0e_0_usa")
+        sys.exit(1)
+
+    user, passwd, db = sys.argv[1], sys.argv[2], sys.argv[3]
 
 try:
     db = MySQLdb.connect(
