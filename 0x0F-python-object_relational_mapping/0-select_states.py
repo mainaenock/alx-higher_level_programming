@@ -17,6 +17,9 @@ try:
     for rows in results:
         print(rows)
 
+except MySQLdb as e:
+    print(e)
+
 finally:
     cur.close()
     db.close()
