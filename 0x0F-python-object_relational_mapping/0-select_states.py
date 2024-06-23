@@ -3,31 +3,26 @@
 import MySQLdb
 import sys
 
-def main():
-    if len(sys.argv) != 4:
-        print("Usage: python script.py root kali hbtn_0e_0_usa")
-        sys.exit(1)
+if __name__=='__main__':
+    try:
+        db = MySQLdb.connect(
+                host='localhost',
+                port=3306,
+                user=sys.argv[1],
+                passwd=sys.argv[2],
+                db=sys.argv[3]
+                )
 
-    user, passwd, db = sys.argv[1], sys.argv[2], sys.argv[3]
+        cur = db.cursor()
+        cur.execute("SELECT * FROM states ORDER BY states.id ASC")
+        results = cur.fetchall()
 
-try:
-    db = MySQLdb.connect(
-            user='root',
-            host='localhost',
-            passwd='kali',
-            db='hbtn_0e_0_usa'
-            )
+        for rows in results:
+            print(rows)
 
-    cur = db.cursor()
-    cur.execute("SELECT * FROM states ORDER BY states.id ASC")
-    results = cur.fetchall()
+    except MySQLdb as e:
+        print(e)
 
-    for rows in results:
-        print(rows)
-
-except MySQLdb as e:
-    print(e)
-
-finally:
-    cur.close()
-    db.close()
+    finally:
+        cur.close()
+        db.close()
