@@ -18,12 +18,12 @@ if __name__ == '__main__':
                 )
 
         cur = db.cursor()
-        cur.execute("SELECT * FROM states WHERE name LIKE 'N%'"
-                    "ORDER BY states.id ASC;")
+        cur.execute("SELECT * FROM states ORDER BY states.id ASC;")
         results = cur.fetchall()
 
         for row in results:
-            print(row)
+            if row[1][0] == "N":
+                print(row)
     except MySQLdb.Error as e:
         print(e)
 
